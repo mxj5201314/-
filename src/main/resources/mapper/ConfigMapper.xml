@@ -9,7 +9,14 @@
     <select id="getOnce" resultType="com.tencent.wxcloudrun.model.Config">
         select *
         from config
-        limit 1
+        where id = 1
+    </select>
+
+    <select id="getDateList" resultType="com.tencent.wxcloudrun.model.Config">
+        select *
+        from config
+        where id in (2,3)
+        order by id ASC
     </select>
 
 

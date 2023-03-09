@@ -12,6 +12,8 @@ import java.util.Optional;
  */
 public interface ConfigService {
 
-  Config getOnce();
+    Config getOnce();
+
+    List<Config> getDateList();
 
 }

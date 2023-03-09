@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -29,9 +30,14 @@ public class ConfigController {
     }
 
     @GetMapping(value = "/once")
-    ApiResponse get() {
+    ApiResponse getOnce() {
         Config once = configService.getOnce();
         return ApiResponse.ok(once);
+    }
+    @GetMapping(value = "/getDateList")
+    ApiResponse getDateList() {
+        List<Config> dateList = configService.getDateList();
+        return ApiResponse.ok(dateList);
     }
 
 
