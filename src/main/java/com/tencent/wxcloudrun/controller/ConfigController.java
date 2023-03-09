@@ -24,6 +24,7 @@ public class ConfigController {
 
     public ConfigController(@Autowired ConfigService configService) {
         this.configService = configService;
+
         this.logger = LoggerFactory.getLogger(ConfigController.class);
     }
 
